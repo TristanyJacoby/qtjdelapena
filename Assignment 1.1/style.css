@@ -1,0 +1,230 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212;
+  color: #f8f9fa;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+}
+
+.btn {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+#seeMoreBtn:hover {
+  background-color: #cfa34a;
+  color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 1.2rem 0;
+  transition: background 0.4s ease;
+}
+
+.navbar-brand,
+.nav-link {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.nav-link:hover {
+  color: #cfa34a !important;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: url('assets/9pmElixerLanding.jpeg') center/cover no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.85)
+  );
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.hero .btn {
+  margin-top: 2rem;
+  padding: 0.75rem 2.5rem;
+  letter-spacing: 2px;
+}
+
+.story-content {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.story-content.show {
+  display: block;
+  opacity: 1;
+}
+
+.story-content h2 {
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.story-content p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.85;
+}
+
+.hero-expand {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease, opacity 0.6s ease;
+}
+
+.hero-expand h2 {
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.hero-expand p {
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.85;
+}
+
+.hero-expand.show {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.carousel-item {
+  height: 80vh;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.7)
+  );
+}
+
+.carousel-item:nth-child(3) {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6),
+    rgba(20, 20, 20, 0.4)
+  );
+}
+
+.carousel-product-img {
+  max-height: 70vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.carousel-text {
+  padding: 2rem;
+}
+
+.carousel-text h3 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.carousel-text h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #cfa34a;
+  margin-top: 12px;
+}
+
+.carousel-text p {
+  max-width: 420px;
+  opacity: 0.85;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: auto;
+    padding: 4rem 0;
+  }
+  .carousel-product-img {
+    max-height: 300px;
+    margin-bottom: 2rem;
+  }
+  .carousel-text {
+    text-align: center;
+  }
+  .carousel-text p {
+    margin: auto;
+  }
+}
+
+.perfume-notes p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+.perfume-notes strong {
+  letter-spacing: 1px;
+  color: #cfa34a; 
+}
+
+.divider {
+  height: 1px;
+  width: 500px; 
+  background-color: #cfa34a; 
+  margin: 1rem 0; 
+  border-radius: 1px;
+}
+
+footer {
+  background-color: #1c1c1c;
+  padding: 30px 0;
+  margin-top: 80px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
